@@ -1,0 +1,93 @@
+*{     /*paara todo*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between; /*espaço para todos*/
+    align-items: center;
+    background: #333;
+    color: #fff;
+    padding: 15px;
+}
+
+nav{
+    display: flex;
+    gap: 15px;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+aside{
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.card{
+    background-color: #ddd;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+/* max-width se adapta ao tamanho do celular*/
+@media (max-width: 768px){
+    .container{
+        display: grid; /*empilha tudo*/
+        padding: 10px;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    aside{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .conteudo{
+        grid-template-columns: 1fr; /*1 coluna no celular*/
+        padding: 10px;
+    }
+
+    .card{
+        width: 100%;
+        padding: 20px;
+    }
+
+    footer{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .side{
+        display: none;
+    }
+}
